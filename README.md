@@ -1,4 +1,4 @@
-# HT2 - Dropbox API Testing With Postman/Newman
+# HT3 - Dropbox API Testing With Postman/Newman and Jenkins integration 
 ## Purpose
 This project implements automated tests for the following Dropbox API scenarios:
 - Upload File
@@ -8,9 +8,10 @@ This project implements automated tests for the following Dropbox API scenarios:
 ### Tools
 - Newman v5 by Postman Labs: https://github.com/postmanlabs/newman
 - Newman htmlextra reporter: https://github.com/DannyDainton/newman-reporter-htmlextra
+- Jenkins automation server
 
 ## Installation
-To install, clone the repository and install all the dependencies:  `npm i`
+To install, clone the repository and install all the dependencies: `npm i`
 
 ## Setup
 You would need:
@@ -70,7 +71,7 @@ All changes to this repository are automatically verified via the Jenkins build:
 http://139.144.79.230:8080/blue/pipelines/
 There are 2 pipelines:
 - API Testing - standard Jenkins build job
-- HT2_Dropbox_API - pipeline that is defined in Jenkins file in this repository
+- HT3_Dropbox_API_Testing - pipeline that is defined in Jenkins file in this repository
 
 
 ## Implemented Tests
