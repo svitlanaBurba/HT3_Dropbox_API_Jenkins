@@ -8,6 +8,7 @@ This project implements automated tests for the following Dropbox API scenarios:
 ### Tools
 - Newman v5 by Postman Labs: https://github.com/postmanlabs/newman
 - Newman htmlextra reporter: https://github.com/DannyDainton/newman-reporter-htmlextra
+- Jenkins automation server
 
 ## Installation
 To install, clone the repository and install all the dependencies:  `npm i`
