@@ -11,7 +11,7 @@ This project implements automated tests for the following Dropbox API scenarios:
 - Jenkins automation server
 
 ## Installation
-To install, clone the repository and install all the dependencies:  `npm i`
+To install, clone the repository and install all the dependencies: `npm i`
 
 ## Setup
 You would need:
