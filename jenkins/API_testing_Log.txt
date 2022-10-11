@@ -1,0 +1,132 @@
+Started by GitHub push by svitlanaBurba
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/API testing
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git
+ > git init /var/lib/jenkins/workspace/API testing # timeout=10
+Fetching upstream changes from https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.20.1'
+ > git fetch --tags --force --progress -- https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Seen branch in repository origin/main
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 95f6b1a15b53be0f15efe56f7106a1ff3922ee55 (origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 95f6b1a15b53be0f15efe56f7106a1ff3922ee55 # timeout=10
+Commit message: "Changed name to config.xml"
+ > git rev-list --no-walk a185df89b4d2428fbc19a5f2ec955ff7040a6406 # timeout=10
+[API testing] $ /bin/sh -xe /tmp/jenkins10167910328170881921.sh
++ npm i
+npm WARN old lockfile 
+npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+npm WARN old lockfile 
+npm WARN old lockfile This is a one-time fix-up, please be patient...
+npm WARN old lockfile 
+npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+npm WARN deprecated gulp-header@1.8.12: Removed event-stream from gulp-header
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+
+added 306 packages, and audited 307 packages in 36s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
++ npm run test_with_creds
+
+> dropbox@1.0.0 test_with_creds
+> newman run collection_dropbox_api.json --globals globals.json --global-var "appKey=$APPKEY" --global-var "appSecret=$APPSECRET" --global-var "refreshToken=$APPTOKEN" -r htmlextra,cli --reporter-htmlextra-title "Dropbox API Test Run"
+
+newman
+
+Dropbox API Tests
+
+❏ Authorization
+↳ Get Token
+  POST https://api.dropbox.com/oauth2/token [400 Bad Request, 399B, 562ms]
+
+↳ Refresh Token
+  POST https://api.dropbox.com/oauth2/token [200 OK, 681B, 186ms]
+
+❏ Upload File / Negative
+↳ UploadFile_unauthentificated
+  POST https://content.dropboxapi.com/2/files/upload [400 Bad Request, 627B, 280ms]
+  ✓  Status code is 400
+
+↳ UploadFile_wrong_request_type
+  GET https://content.dropboxapi.com/2/files/upload [404 Not Found, 26.12kB, 177ms]
+  ✓  Status code is 404
+
+↳ UploadFile_no_args
+  POST https://content.dropboxapi.com/2/files/upload [400 Bad Request, 619B, 154ms]
+  ✓  Status code is 400
+
+↳ UploadFile_no_path
+  POST https://content.dropboxapi.com/2/files/upload [400 Bad Request, 613B, 180ms]
+  ✓  Status code is 400
+
+❏ Upload File
+↳ UploadFile
+  POST https://content.dropboxapi.com/2/files/upload [200 OK, 889B, 767ms]
+  ✓  Status code is 200
+  ✓  FileName as specified
+
+❏ GetFileMetadata / Negative
+↳ GetMetaData_unauthentificated
+  POST https://api.dropboxapi.com/2/files/get_metadata [400 Bad Request, 513B, 180ms]
+  ✓  Status code is 400
+
+↳ GetMetaData_wrong_request_type
+  GET https://api.dropboxapi.com/2/files/get_metadata [404 Not Found, 26kB, 118ms]
+  ✓  Status code is 404
+
+↳ GetMetaData_no_payload
+  POST https://api.dropboxapi.com/2/files/get_metadata [400 Bad Request, 586B, 199ms]
+  ✓  Status code is 400
+
+↳ GetMetaData_no_path
+  POST https://api.dropboxapi.com/2/files/get_metadata [400 Bad Request, 481B, 164ms]
+  ✓  Status code is 400
+
+❏ GetFileMetadata
+↳ GetMetaData
+  POST https://api.dropboxapi.com/2/files/get_metadata [200 OK, 813B, 226ms]
+  ✓  Status code is 200
+  ✓  File Data as uploaded (same name and size)
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  12 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                  34 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                  29 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                  12 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 5.1s                                           │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 53.21kB (approx)                              │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 266ms [min: 118ms, max: 767ms, s.d.: 186ms] │
+└────────────────────────────────────────────────────────────────────┘
+Finished: SUCCESS

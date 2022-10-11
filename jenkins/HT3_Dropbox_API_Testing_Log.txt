@@ -1,0 +1,230 @@
+Push event to branch main
+Connecting to https://api.github.com with no credentials, anonymous access
+Obtained jenkins/Jenkinsfile from 95f6b1a15b53be0f15efe56f7106a1ff3922ee55
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/HT3_Dropbox_API_Testing_main
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/HT3_Dropbox_API_Testing_main/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+Fetching without tags
+Fetching upstream changes from https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.20.1'
+ > git fetch --no-tags --force --progress -- https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git +refs/heads/main:refs/remotes/origin/main # timeout=10
+Checking out Revision 95f6b1a15b53be0f15efe56f7106a1ff3922ee55 (main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 95f6b1a15b53be0f15efe56f7106a1ff3922ee55 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main 95f6b1a15b53be0f15efe56f7106a1ff3922ee55 # timeout=10
+Commit message: "Changed name to config.xml"
+ > git rev-list --no-walk a185df89b4d2428fbc19a5f2ec955ff7040a6406 # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/HT3_Dropbox_API_Testing_main/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/svitlanaBurba/HT2_Dropbox_API # timeout=10
+Fetching upstream changes from https://github.com/svitlanaBurba/HT2_Dropbox_API
+ > git --version # timeout=10
+ > git --version # 'git version 2.20.1'
+ > git fetch --tags --force --progress -- https://github.com/svitlanaBurba/HT2_Dropbox_API +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 93c9fee825c18482eb920992067e230df31774ca (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 93c9fee825c18482eb920992067e230df31774ca # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main 93c9fee825c18482eb920992067e230df31774ca # timeout=10
+Commit message: "Update README.md"
+ > git rev-list --no-walk 93c9fee825c18482eb920992067e230df31774ca # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running Tests)
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor
+Running on Jenkins in /var/lib/jenkins/workspace/HT3_Dropbox_API_Testing_main@2
+[Pipeline] {
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/HT3_Dropbox_API_Testing_main@2/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+Fetching without tags
+Fetching upstream changes from https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.20.1'
+ > git fetch --no-tags --force --progress -- https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins.git +refs/heads/main:refs/remotes/origin/main # timeout=10
+Checking out Revision 95f6b1a15b53be0f15efe56f7106a1ff3922ee55 (main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 95f6b1a15b53be0f15efe56f7106a1ff3922ee55 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main 95f6b1a15b53be0f15efe56f7106a1ff3922ee55 # timeout=10
+Commit message: "Changed name to config.xml"
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withCredentials
+Masking supported pattern matches of $APPTOKEN
+[Pipeline] {
+[Pipeline] withCredentials
+Masking supported pattern matches of $APPSECRET
+[Pipeline] {
+[Pipeline] sh
++ npm i
+npm WARN old lockfile 
+npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+npm WARN old lockfile 
+npm WARN old lockfile This is a one-time fix-up, please be patient...
+npm WARN old lockfile 
+npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+npm WARN deprecated gulp-header@1.8.12: Removed event-stream from gulp-header
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+
+added 306 packages, and audited 307 packages in 13s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
++ npm run test_with_creds
+
+> dropbox@1.0.0 test_with_creds
+> newman run collection_dropbox_api.json --globals globals.json --global-var "appKey=$APPKEY" --global-var "appSecret=$APPSECRET" --global-var "refreshToken=$APPTOKEN" -r htmlextra,cli --reporter-htmlextra-title "Dropbox API Test Run"
+
+newman
+
+Dropbox API Tests
+
+❏ Authorization
+↳ Get Token
+  POST https://api.dropbox.com/oauth2/token [400 Bad Request, 399B, 277ms]
+
+↳ Refresh Token
+  POST https://api.dropbox.com/oauth2/token [200 OK, 681B, 158ms]
+
+❏ Upload File / Negative
+↳ UploadFile_unauthentificated
+  POST https://content.dropboxapi.com/2/files/upload [400 Bad Request, 627B, 195ms]
+  ✓  Status code is 400
+
+↳ UploadFile_wrong_request_type
+  GET https://content.dropboxapi.com/2/files/upload [404 Not Found, 26.12kB, 139ms]
+  ✓  Status code is 404
+
+↳ UploadFile_no_args
+  POST https://content.dropboxapi.com/2/files/upload [400 Bad Request, 619B, 133ms]
+  ✓  Status code is 400
+
+↳ UploadFile_no_path
+  POST https://content.dropboxapi.com/2/files/upload [400 Bad Request, 613B, 169ms]
+  ✓  Status code is 400
+
+❏ Upload File
+↳ UploadFile
+  POST https://content.dropboxapi.com/2/files/upload [200 OK, 889B, 512ms]
+  ✓  Status code is 200
+  ✓  FileName as specified
+
+❏ GetFileMetadata / Negative
+↳ GetMetaData_unauthentificated
+  POST https://api.dropboxapi.com/2/files/get_metadata [400 Bad Request, 513B, 148ms]
+  ✓  Status code is 400
+
+↳ GetMetaData_wrong_request_type
+  GET https://api.dropboxapi.com/2/files/get_metadata [404 Not Found, 26kB, 118ms]
+  ✓  Status code is 404
+
+↳ GetMetaData_no_payload
+  POST https://api.dropboxapi.com/2/files/get_metadata [400 Bad Request, 586B, 180ms]
+  ✓  Status code is 400
+
+↳ GetMetaData_no_path
+  POST https://api.dropboxapi.com/2/files/get_metadata [400 Bad Request, 481B, 160ms]
+  ✓  Status code is 400
+
+❏ GetFileMetadata
+↳ GetMetaData
+  POST https://api.dropboxapi.com/2/files/get_metadata [200 OK, 813B, 410ms]
+  ✓  Status code is 200
+  ✓  File Data as uploaded (same name and size)
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  12 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                  34 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                  29 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                  12 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 4.5s                                           │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 53.21kB (approx)                              │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 216ms [min: 118ms, max: 512ms, s.d.: 117ms] │
+└────────────────────────────────────────────────────────────────────┘
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
