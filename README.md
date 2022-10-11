@@ -62,16 +62,19 @@ You can initate a test run from the command line by typing
 npm run test
 ```
 ## Reports
-By default this project uses 2 reporters: 
+By default this project uses 2 reporters:
+
 - Newman CLI reporter that provides test run results to console
 - Newman HTML reporter that generates html report for each run and saves it to the `newman` directory
 
 ## Jenkins integration
 All changes to this repository are automatically verified via the Jenkins build:
 http://139.144.79.230:8080/blue/pipelines/
+
 There are 2 pipelines:
+
 - API Testing - standard Jenkins build job. Configuration is available in `jenkins/config.xml`. Logs are available in `jenkins/API_testing_Log.txt`.
-- HT3_Dropbox_API_Testing - pipeline that is defined in Jenkins file in this repository. Configuration is in jenkins/Jenkinsfile (automatically synced with Jenkins server). Logs are available in `jenkins/Logs are available in `jenkins/API_testing_Log.txt`.
+- HT3_Dropbox_API_Testing - pipeline that is defined in Jenkins file in this repository. Configuration is in `jenkins/Jenkinsfile` (automatically synced with Jenkins server). Logs are available in `jenkins/Logs are available in `jenkins/API_testing_Log.txt`.
 
 
 ## Implemented Tests
