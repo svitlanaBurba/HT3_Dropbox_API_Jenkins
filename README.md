@@ -70,8 +70,8 @@ By default this project uses 2 reporters:
 All changes to this repository are automatically verified via the Jenkins build:
 http://139.144.79.230:8080/blue/pipelines/
 There are 2 pipelines:
-- API Testing - standard Jenkins build job. Configuration is available in jenkins/api_testing.xml
-- HT3_Dropbox_API_Testing - pipeline that is defined in Jenkins file in this repository. Configuration is in jenkins/Jenkinsfile (automatically synced with Jenkins server)
+- API Testing - standard Jenkins build job. Configuration is available in `jenkins/config.xml`. Logs are available in `jenkins/API_testing_Log.txt`.
+- HT3_Dropbox_API_Testing - pipeline that is defined in Jenkins file in this repository. Configuration is in jenkins/Jenkinsfile (automatically synced with Jenkins server). Logs are available in `jenkins/Logs are available in `jenkins/API_testing_Log.txt`.
 
 
 ## Implemented Tests
