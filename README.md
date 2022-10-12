@@ -29,6 +29,11 @@ To configure an Oauth2.0 authorization for our project to your test account you 
 	- Scoped access = New
 	- Choose the type of access you need = Full Dropbox 
   - Name your app = you can use any unique name here (Dropbox requires that app names should be unique globally)
+- Add permissions - go to Permissions tab and tick boxes:
+  - files.content.write
+  - files.content.read
+
+(Important: each time when you change permissions you would need to obtain a new authorization code!)
 - Write down the following credentials:
   - App key
   - App Secret
