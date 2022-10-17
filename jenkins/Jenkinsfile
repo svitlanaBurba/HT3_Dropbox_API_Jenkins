@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git(url: 'https://github.com/svitlanaBurba/HT3_Dropbox_API', branch: 'main')
+        git(url: 'https://github.com/svitlanaBurba/HT3_Dropbox_API_Jenkins', branch: 'main')
       }
     }
 
